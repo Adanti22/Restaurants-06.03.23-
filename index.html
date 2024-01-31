@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="modal-back">
+      <h2 class="modal-form-title">
+        We are happy to take your order! <br />
+        Leave your contacts and we will contact you
+      </h2>
+      <form id="modal-form" action="#">
+        <input
+          type="text"
+          placeholder="Enter your addres"
+          class="input-modal"
+          id="modal-address"
+        />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          class="input-modal"
+          id="modal-name"
+        />
+        <input
+          type="number"
+          placeholder="Enter your number"
+          class="input-modal"
+          id="modal-number"
+        />
+        <input type="submit" class="modal-form-btn" />
+      </form>
+    </div>
+    <div class="container">
+      <header class="header">
+        <a class="logo">
+          <img
+            class="logo"
+            src="https://img.freepik.com/premium-vector/food-delivery-logo-or-eating-icon_685330-406.jpg"
+            alt="Logo"
+          />
+        </a>
+        <label class="address">
+          <input
+            type="text"
+            class="input input-address"
+            placeholder="Адрес доставки"
+          />
+        </label>
+        <div class="buttons">
+          <span class="user-name"></span>
+
+          <button class="button button-cart" id="cart-button">
+            <img src="img/basket.png" class="basket-img" alt="" />
+            <span class="button-text"></span>
+          </button>
+          <button class="button button-primary button-out">
+            <span class="button-text">Выйти</span>
+            <span class="button-out-svg"></span>
+          </button>
+        </div>
+      </header>
+    </div>
+    <main class="main">
+      <div class="slider-container swiper-container">
+        <div class="slider-wrapper swiper-wrapper">
+          <div class="image-slider-wrap swiper-slide">
+            <div class="image-slide">
+              <img
+                src="https://static.tildacdn.com/tild6636-3061-4664-a266-623265306162/___1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="image-slider-wrap swiper-slide">
+            <div class="image-slide">
+              <img
+                src="https://комсомольск.ваши-суши.рф/images/akcii/2019/skidka-roll-nedeli-site.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="image-slider-wrap swiper-slide">
+            <div class="image-slide">
+              <img
+                src="https://www.sushi-lavka.ru/hilites/data/images/2623b78a63095f967cc12ef545dbd087.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="container">
+        <section class="restaurants">
+          <div class="section-heading">
+            <h2 class="section-title">Рестораны</h2>
+            <label class="search">
+              <input
+                type="text"
+                class="input input-search"
+                placeholder="Поиск блюд и ресторанов"
+              />
+            </label>
+          </div>
+          <div class="cards cards-restaurants"></div>
+          <!-- /.cards -->
+        </section>
+        <section class="menu hide">
+          <div class="section-heading">
+            <!-- /.card-info -->
+          </div>
+          <div class="cards cards-menu"></div>
+          <!-- /.cards -->
+        </section>
+      </div>
+      <!-- /.container -->
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-block">
+          <img
+            class="logo"
+            src="https://img.freepik.com/premium-vector/food-delivery-logo-or-eating-icon_685330-406.jpg"
+            alt="Logo"
+          />
+          <nav class="footer-nav">
+            <a href="#" class="footer-link">Ресторанам </a>
+            <a href="#" class="footer-link">Курьерам</a>
+            <a href="#" class="footer-link">Пресс-центр</a>
+            <a href="#" class="footer-link">Контакты</a>
+          </nav>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><img class="media-logo" src="img/Media/inst.png" alt="instagram"
+            /></a>
+            <a href="#" class="social-link"
+              ><img class="media-logo" src="img/Media/fb.png" alt="facebook"
+            /></a>
+            <a href="#" class="social-link"
+              ><img class="media-logo" src="img/Media/vk.png" alt="vk"
+            /></a>
+          </div>
+          <!-- /.social-links -->
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal-cart">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 class="modal-title">Корзина</h3>
+          <button class="close">&times;</button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <span class="modal-pricetag">0 ТГ</span>
+          <div class="footer-buttons">
+            <button class="button button-primary" id="offer-btn">
+              Оформить заказ
+            </button>
+            <button class="button clear-cart">Отчистить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sended">
+      <h2 class="sended-title">THANK YOU FOR ORDER!</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
